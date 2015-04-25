@@ -75,6 +75,9 @@ class EventDebuggerListener implements SharedListenerAggregateInterface
             'event' => $this->getEventManagerCallbacks($event),
             'sharedEvent' => $this->getSharedEventManagerCallbacks($event),
         );
+
+        // For session.validate (isValid() method in SessionManager.)
+        return true;
     }
 
     /**
