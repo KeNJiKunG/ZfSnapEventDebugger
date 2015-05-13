@@ -124,7 +124,7 @@ class EventDebuggerListener implements SharedListenerAggregateInterface
      */
     protected function getCallerTrace()
     {
-        $debugBacktrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, self::NUMBER_STACK_FRAME);
+        $debugBacktrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
         $index = self::NUMBER_STACK_FRAME - 1;
 
         if (isset($debugBacktrace[$index]) && $debugBacktrace[$index]['function'] === 'trigger') {
